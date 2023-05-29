@@ -1,0 +1,38 @@
+﻿@model CoreApp.Models.Laptop
+@{
+    ViewData["Title"] = "LaptopGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Laptop update page</h1>
+
+@using (Html.BeginForm("LaptopUpdate", "LaptopCon", FormMethod.Post))
+
+{
+    @Html.Label("Laptop id");
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" });
+
+    @Html.Label("Brand");
+    @Html.TextBoxFor(x => x.Brand, new { @class = "form-control" });
+    <br />
+    @Html.Label("Model");
+    @Html.TextBoxFor(x => x.Model, new { @class = "form-control" });
+    <br />
+
+    @Html.Label("PurchasePrice");
+    @Html.TextBoxFor(x => x.PurchasePrice, new { @class = "form-control" });
+    <br />
+    @Html.Label("SalePrice");
+    @Html.TextBoxFor(x => x.SalePrice, new { @class = "form-control" });
+    <br />
+    @Html.Label("DiscountPrice");
+    @Html.TextBoxFor(x => x.DiscountPrice, new { @class = "form-control" });
+    <br />
+    @Html.Label("Barcod");
+    @Html.TextBoxFor(x => x.Barcode, new { @class = "form-control" });
+    <br />
+
+
+    <button class=" btn btn-primary">Update button</button>
+
+}

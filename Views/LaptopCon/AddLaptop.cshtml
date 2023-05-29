@@ -1,0 +1,49 @@
+﻿@model CoreApp.Models.Laptop; 
+@{
+    ViewData["Title"] = "AddLaptop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Laptop add page</h1>
+@using (Html.BeginForm("AddLaptop", "LaptopCon", FormMethod.Post))
+{
+    @Html.Label("Brand");
+    @Html.TextBoxFor(x => x.Brand, new { @class = "form-control" });
+    <br />
+    @Html.Label("Model");
+    @Html.TextBoxFor(x => x.Model, new { @class = "form-control" });
+    <br />
+    @Html.Label("CPU");
+    @Html.TextBoxFor(x => x.CPU, new { @class = "form-control" });
+    <br />
+    @Html.Label("PurchasePrice");
+    @Html.TextBoxFor(x => x.PurchasePrice, new { @class = "form-control" });
+    <br />
+    @Html.Label("SalePrice");
+    @Html.TextBoxFor(x => x.SalePrice, new { @class = "form-control" });
+    <br />
+    @Html.Label("DiscountPrice");
+    @Html.TextBoxFor(x => x.DiscountPrice, new { @class = "form-control" });
+    <br />
+    @Html.Label("Ram");
+    @Html.TextBoxFor(x => x.Ram, new { @class = "form-control" });
+    <br />
+    @Html.Label("Video dard");
+    @Html.TextBoxFor(x => x.VideoCard, new { @class = "form-control" });
+    <br />
+    @Html.Label("Barcode");
+    @Html.TextBoxFor(x => x.Barcode, new { @class = "form-control" });
+    <br />
+    @Html.Label("Create date");
+    @Html.TextBoxFor(x => x.CreateDate, new { @class = "form-control" });
+    <br />
+    @Html.Label("Updated date");
+    @Html.TextBoxFor(x => x.UpdatedDate, new { @class = "form-control" });
+    <br />
+    @Html.Label("Deleted date");
+    @Html.TextBoxFor(x => x.DeletedDate, new { @class = "form-control" });
+    <br />
+
+    <button class="btn btn-success">Elave et</button>
+
+}

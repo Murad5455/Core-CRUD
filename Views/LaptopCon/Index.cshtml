@@ -1,0 +1,54 @@
+﻿@model List< CoreApp.Models.Laptop> 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Laptop</h1>
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Markasi</th>
+        <th>Model</th>
+        <th>CPU</th>
+        <th>Alis qiymeti</th>
+        <th>Satis qiymeti</th>
+        <th>Endirimli qiymeti</th>
+        <th>Barkodu</th>
+        <th>Yaradilma tarixi</th>
+        <th>Yenilenme tarixi</th>
+        <th>Silinme tarixi</th>
+        <th>Ram</th>
+        <th>Video kart</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ID</th>
+            <th>@item.Brand</th>
+            <th>@item.Model</th>
+            <th>@item.CPU</th>
+            <th>@item.PurchasePrice</th>
+            <th>@item.SalePrice</th>
+            <th>@item.DiscountPrice</th>
+            <th>@item.Barcode</th>
+            <th>@item.CreateDate</th>
+            <th>@item.UpdatedDate</th>
+            <th>@item.DeletedDate</th>
+            <th>@item.Ram</th>
+            <th>@item.VideoCard</th>
+            <th>  <a href="/LaptopCon/DeleteLaptop/@item.ID" class="btn btn-danger">Delete</a></th>
+            <th>  <a href="/LaptopCon/LaptopGet/@item.ID" class="btn btn-warning">Update</a></th>
+
+        </tr>
+
+
+    }
+
+
+
+</table>
+<th>  <a href="/LaptopCon/AddLaptop/" class="btn btn-info">Laptop add</a></th>
